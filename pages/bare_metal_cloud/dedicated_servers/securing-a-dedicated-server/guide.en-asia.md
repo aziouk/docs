@@ -200,6 +200,8 @@ filter = sshd
 maxretry = 3
 findtime = 5m
 bantime  = 30m
+# for ubuntu use ufw, or iptables default is used and bans aren't applied (important)
+banaction = ufw
 ```
 
 In this example, any SSH login attempt that fails three times within five minutes will result in an IP ban period of 30 minutes.
